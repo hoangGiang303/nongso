@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/hoangGiang303/nongso/issues"
   },
-  "homepage": "https://github.com/hoangGiang303/nongso#readme"
+  "homepage": "https://github.com/hoangGiang303/nongso#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }

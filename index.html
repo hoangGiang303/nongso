@@ -3,53 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giao diện đơn giản</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        input {
-            padding: 8px;
-            width: 200px;
-        }
-        button {
-            padding: 8px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-            padding: 10px;
-            background: #f1f1f1;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Nông Nghiệp Số</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Danh sách công việc</h2>
-    <input type="text" id="taskInput" placeholder="Nhập công việc...">
-    <button onclick="addTask()">Thêm</button>
-    <ul id="taskList"></ul>
+    <header>
+        <h1>Nông Nghiệp Số</h1>
+        <p>Ứng dụng công nghệ vào sản xuất nông nghiệp</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Về Chúng Tôi</h2>
+            <p>Nông Nghiệp Số là nền tảng giúp bà con nông dân tiếp cận công nghệ để nâng cao năng suất và chất lượng sản phẩm.</p>
+        </section>
 
-    <script>
-        function addTask() {
-            const input = document.getElementById('taskInput');
-            const task = input.value.trim();
-            if (task !== '') {
-                const li = document.createElement('li');
-                li.textContent = task;
-                document.getElementById('taskList').appendChild(li);
-                input.value = '';
-            }
-        }
-    </script>
+        <section>
+            <h2>Dịch Vụ</h2>
+            <ul>
+                <li>Giám sát cây trồng bằng AI</li>
+                <li>Hệ thống tưới tiêu tự động</li>
+                <li>Quản lý sản phẩm và đầu ra</li>
+            </ul>
+        </section>
+
+        <button id="learn-more">Tìm hiểu thêm</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nông Nghiệp Số. Mọi quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
