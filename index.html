@@ -3,48 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Đơn Giản</title>
+    <title>Giao diện đơn giản</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
-            margin: 0;
+            margin: 50px;
+        }
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
             padding: 0;
         }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            text-decoration: none;
-            background: #007bff;
-            color: white;
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f1f1f1;
             border-radius: 5px;
-        }
-        .btn:hover {
-            background: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Chào mừng đến với Website của bạn!</h1>
-        <p>Đây là một trang web đơn giản được tạo bằng HTML và CSS.</p>
-        <a href="#" class="btn">Khám Phá Ngay</a>
-    </div>
+    <h2>Danh sách công việc</h2>
+    <input type="text" id="taskInput" placeholder="Nhập công việc...">
+    <button onclick="addTask()">Thêm</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            const task = input.value.trim();
+            if (task !== '') {
+                const li = document.createElement('li');
+                li.textContent = task;
+                document.getElementById('taskList').appendChild(li);
+                input.value = '';
+            }
+        }
+    </script>
 </body>
 </html>

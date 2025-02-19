@@ -1,0 +1,20 @@
+{
+  "name": "nongso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangGiang303/nongso.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoangGiang303/nongso/issues"
+  },
+  "homepage": "https://github.com/hoangGiang303/nongso#readme"
+}
